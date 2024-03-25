@@ -36,5 +36,6 @@ float input_quant_multiplier[TOTAL_CALIB_LAYER] = {
 	   8};    //conv 20
 ```
 ##### (2) Layer parameter Calibration    
-(1)에서 추가한 Layer의 Parameter은 임의로 설정한 값이다. 그리고 해당 parameter을 변경함에 따라 mAP와 time에 미약한 변화가 있음을 확인했다.   
+(1)에서 추가한 Layer의 Parameter은 임의로 설정한 값이다.   
+그리고 해당 parameter을 변경함에 따라 mAP와 time에 미약한 변화가 있음을 확인했다.   
 mAP의 상승을 목표로 Layer의 적합한 parameter을 계산해서 적용하고자 한다.   
