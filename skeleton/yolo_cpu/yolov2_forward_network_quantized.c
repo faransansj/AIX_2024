@@ -303,18 +303,32 @@ void do_quantization(network net) {
 
     float input_quant_multiplier[TOTAL_CALIB_LAYER] = {
      128,	  //conv 0
-      16,     //conv 2
-      16,     //conv 4
-      16,     //conv 6
-      16,     //conv 8
-      16,     //conv 10     
-      16,     //conv 12
-      16,     //conv 13
+      8,     //conv 2
+      8,     //conv 4
+      8,     //conv 6
+      8,     //conv 8
+      8,     //conv 10     
+      8,     //conv 12
+      8,     //conv 13
       8,     //conv 14
       8,     //conv 17
       8      //conv 20
 
-    };    
+    }; 
+
+    float weight_quant_multiplier[TOTAL_CALIB_LAYER] = {
+        8,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128,
+        128
+    };
 
     printf("Multipler    Input    Weight    Bias\n");
     for (j = 0; j < net.n; ++j) {
